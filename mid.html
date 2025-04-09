@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        .cart-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .cart-table {
+            width: 60%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #f4ebe3;
+        }
+        .cart-summary {
+            width: 35%;
+            background: #f4ebe3;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .checkout-btn {
+            background: white;
+            border: 1px solid black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product-img {
+            width: 50px;
+            border-radius: 5px;
+        }
+        .quantity-input {
+            width: 40px;
+            text-align: center;
+        }
+        .trash-icon {
+            color: goldenrod;
+            cursor: pointer;
+        }
+        .benefits-section {
+            background: #f4ebe3;
+            padding: 20px;
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .benefit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .benefit-icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .benefit-title {
+            font-weight: bold;
+        }
+        .benefit-text {
+            color: gray;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <div class="cart-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="sofa.jpg" alt="Asgaard sofa" class="product-img">
+                            Asgaard sofa
+                        </td>
+                        <td>Rs. 250,000.00</td>
+                        <td><input type="number" value="1" class="quantity-input"></td>
+                        <td>Rs. 250,000.00</td>
+                        <td><span class="trash-icon">🗑️</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="cart-summary">
+            <h3>Cart Totals</h3>
+            <p>Subtotal: <strong>Rs. 250,000.00</strong></p>
+            <p>Total: <strong style="color: goldenrod;">Rs. 250,000.00</strong></p>
+            <button class="checkout-btn">Check Out</button>
+        </div>
+    </div>
+
+    <div class="benefits-section">
+        <div class="benefit">
+            <span class="benefit-icon">🏆</span>
+            <span class="benefit-title">High Quality</span>
+            <span class="benefit-text">Crafted from top materials</span>
+        </div>
+        <div class="benefit">
+            <span class="benefit-icon">✔️</span>
+            <span class="benefit-title">Warranty Protection</span>
+            <span class="benefit-text">Over 2 years</span>
+        </div>
+        <div class="benefit">
+            <span class="benefit-icon">📦</span>
+            <span class="benefit-title">Free Shipping</span>
+            <span class="benefit-text">Order over 150$</span>
+        </div>
+        <div class="benefit">
+            <span class="benefit-icon">🎧</span>
+            <span class="benefit-title">24 / 7 Support</span>
+            <span class="benefit-text">Dedicated support</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Menu</title>
+    <style>
+        body{
+            width: 100%;
+        }
+        ul{
+           margin: 0;
+           padding: 0;
+           list-style: none;
+           display: flex;
+           
+        }
+        ul li a{
+            display: inline-block;
+            width: 300px;
+            padding: 20px 0;
+            text-align: center;
+            text-decoration: none;
+            background-color: tomato;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: #fff;
+        }
+        ul li a:hover{
+            background-color: black;
+        }
+        ul li{
+            position: relative;
+        }
+        .subnab{
+            flex-direction: column;
+            display: none;
+        }
+        ul li:hover .subnab{
+            display: block;
+        }
+        .submenu li{
+            position: relative;
+        }
+        .submenu{
+           flex-direction: column-reverse;
+            display: none;  
+        }
+        ul li:hover .submenu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">WordPress</a>
+        <ul class="subnab">
+            <li><a href="#">Themes</a></li>
+            <li>
+                <a href="#">Plugins</a>
+            </li>
+            <li>
+                <a href="#">Tutorials</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="#">Stuff</a>
+                    </li>
+                    <li>
+                       <a href="#">Things</a>
+                    </li>
+                    <li>
+                        <a href="#">Other Stuff</a>
+                    </li>
+                    
+                    </li>
+                </ul>
+            </li>
+              
+            </li>
+        </ul>
+        </li>
+        <li><a href="#">Graphics Design</a></li>
+        <li><a href="#">Inspiration</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</body>
+</html>

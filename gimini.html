@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asgaard Sofa - Furniro</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        /* Header */
+        .header {
+            background-color: #f0f0fa;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .logo span {
+            color: #8860d0; /* Example Furniro brand color */
+        }
+
+        .navigation ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .navigation li {
+            margin-left: 20px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-icons a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 15px;
+            font-size: 20px; /* Example icon size */
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            padding: 20px 0;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .breadcrumbs a {
+            text-decoration: none;
+            color: #777;
+        }
+
+        .breadcrumbs span {
+            margin: 0 5px;
+        }
+
+        /* Product Details */
+        .product-details {
+            display: flex;
+            gap: 30px;
+        }
+
+        .product-images {
+            flex: 0 0 150px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .product-images img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .main-image {
+            flex-grow: 1;
+            border: 1px solid #ddd;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-image img {
+            max-width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+        }
+
+        .product-info {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            color: #ffc107;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .rating span {
+            color: #777;
+            margin-left: 5px;
+        }
+
+        .product-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .product-options {
+            margin-bottom: 20px;
+        }
+
+        .option-title {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .size-options button,
+        .color-options button {
+            padding: 8px 15px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .size-options button.selected,
+        .color-options button.selected {
+            border-color: #8860d0;
+            color: #8860d0;
+        }
+
+        .color-options button {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            padding: 0;
+            display: inline-block;
+        }
+
+        .color-options button[data-color="purple"] {
+            background-color: #8860d0;
+        }
+
+        .color-options button[data-color="black"] {
+            background-color: #000;
+        }
+
+        .color-options button[data-color="gold"] {
+            background-color: #daa520;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .quantity-controls button {
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            background-color: #eee;
+            cursor: pointer;
+        }
+
+        .quantity-controls input {
+            width: 50px;
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ccc;
+            margin: 0 10px;
+        }
+
+        .add-to-cart-actions button {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: 1px solid #333;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .add-to-cart-actions .add-cart {
+            background-color: #fff;
+            color: #333;
+            margin-right: 10px;
+        }
+
+        .add-to-cart-actions .compare {
+            background-color: #fff;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><span>A</span> Furniro</div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <a href="#">👤</a>
+            <a href="#">🔍</a>
+            <a href="#">❤️</a>
+            <a href="#">🛒</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="#">Home</a> <span>></span> <a href="#">Shop</a> <span>></span> Asgaard sofa
+        </div>
+
+        <div class="product-details">
+            <div class="product-images">
+                <img src="./bg-image (3).png" alt="Sofa Thumbnail 1">
+                <img src="https://via.placeholder.com/100x100/e0e0e0/bbb?Text=Thumb+2" alt="Sofa Thumbnail 2">
+                <img src="https://via.placeholder.com/100x100/d0d0d0/aaa?Text=Thumb+3" alt="Sofa Thumbnail 3">
+                <img src="https://via.placeholder.com/100x100/c0c0c0/999?Text=Thumb+4" alt="Sofa Thumbnail 4">
+            </div>
+            <div class="main-image">
+                <img src="./bg-image (3).png" alt="Asgaard Sofa">
+            </div>
+            <div class="product-info">
+                <h1 class="product-title">Asgaard sofa</h1>
+                <p class="product-price">Rs. 250,000.00</p>
+                <div class="rating">
+                    ⭐⭐⭐⭐⭐ <span>5 Customer Reviews</span>
+                </div>
+                <p class="product-description">Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.</p>
+
+                <div class="product-options">
+                    <div class="option-title">Size</div>
+                    <div class="size-options">
+                        <button class="selected">L</button>
+                        <button>XL</button>
+                        <button>XS</button>
+                    </div>
+                </div>
+
+                <div class="product-options">
+                    <div class="option-title">Color</div>
+                    <div class="color-options">
+                        <button data-color="purple" class="selected"></button>
+                        <button data-color="black"></button>
+                        <button data-color="gold"></button>
+                    </div>
+                </div>
+
+                <div class="quantity-controls">
+                    <button>-</button>
+                    <input type="number" value="1" min="1">
+                    <button>+</button>
+                </div>
+
+                <div class="add-to-cart-actions">
+                    <button class="add-cart">Add To Cart</button>
+                    <button class="compare">+ Compare</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

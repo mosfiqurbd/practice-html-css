@@ -1,0 +1,25 @@
+.box{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    border: 3px solid red;
+    background-repeat: no-repeat;
+    background-size: 100px cover;
+    background-image: url(./Mosfiq.jpg) ,url(./bg-image(3).png);
+    background-position: center center;
+    background-attachment: fixed;
+}
+.box1{
+    width: 1000px;
+    height: 1000px;
+    margin: ;
+    border: 2px solid gold;
+    
+}
+h1{
+    background-color: red;
+    
+}
+h2{
+    background-color: aqua;
+}

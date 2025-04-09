@@ -1,0 +1,136 @@
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: black;
+      }
+      /* Basic reset for lists */
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.main-navigation {
+  background-color: #cb2929;  
+}
+
+.main-menu {
+  display: flex;            /* Display items in a row */
+  align-items: center;
+}
+
+/* Top-level list items */
+.main-menu > li {
+  position: relative;       /* Needed for positioning the submenus */
+}
+
+/* Top-level links */
+.main-menu > li > a {
+  /* display: block; */
+  padding: 1em;
+  background-color: #ff4500; /* Example orange color for top-level */
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+/* Hover on top-level links */
+.main-menu > li > a:hover {
+  /* background-color: #222; */
+  background-color: #e63e00;
+}
+
+/* Submenu (hidden by default) */
+.submenu {
+  position: absolute;  /* Position submenus absolutely under parent */
+  top: 100%;           /* Align right below the parent item */
+  left: 0;
+  background-color: #ff4500;
+  display: none;       /* Hide submenus initially */
+  min-width: 180px;    /* Set a width so it doesn't collapse */
+}
+
+/* Show submenu on parent hover */
+.has-submenu:hover > .submenu {
+  display: block;
+}
+
+/* Submenu items */
+.submenu li a {
+  display: block;
+  background-color: #ff4500;
+  padding: 0.75em 1em;
+  color: #fff;
+  text-decoration: none;
+  /* white-space: nowrap; Prevent text from wrapping if it’s long */
+  transition: background 0.3s ease;
+}
+
+/* Hover state for submenu items */
+.submenu li a:hover {
+  background-color: #1e1a1a;
+}
+
+/* Nested submenu (3rd level, etc.) */
+.submenu li.has-submenu {
+  position: relative;
+  /* again, for further nested positioning */
+}
+
+/* Position deeper level submenus to the right */
+.submenu li.has-submenu:hover > .submenu {
+  top: 0;
+  left: 100%; /* Place the 3rd level submenu to the right of the parent */
+}
+    </style>
+   </head>
+   <body>
+    <nav class="main-navigation">
+      <ul class="main-menu">
+        <li><a href="#">Home</a></li>
+        
+        <li class="has-submenu">
+          <a href="#">WordPress</a>
+          <ul class="submenu">
+            <li><a href="#">Themes</a></li>
+            <li><a href="#">Plugins</a></li>
+            
+            <li class="has-submenu">
+              <a href="#">Tutorials</a>
+              <ul class="submenu">
+                <li><a href="#">Stuff</a></li>
+                <li><a href="#">Things</a></li>
+                <li><a href="#">Other Stuff</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        
+        <li><a href="#">Graphic Design</a></li>
+        <li><a href="#">Inspiration</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glassmorphism Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+   </body>
+   </html>
+  

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+        }
+        
+        .products-section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #53a97f;
+            color: white;
+            padding: 4px 10px;
+            border-radius: px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .product-desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .product-pricing {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .current-price {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .original-price {
+            color: #999;
+            text-decoration: line-through;
+            font-size: 14px;
+        }
+        
+        .product-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .add-to-cart {
+            background: #b88e2f;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .add-to-cart:hover {
+            background: #a57d2a;
+        }
+        
+        .action-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .action-icons a {
+            color: #666;
+            transition: all 0.3s;
+        }
+        
+        .action-icons a:hover {
+            color: #b88e2f;
+        }
+        
+        .show-more {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .show-more-btn {
+            background: white;
+            border: 1px solid #b88e2f;
+            color: #b88e2f;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .show-more-btn:hover {
+            background: #b88e2f;
+            color: white;
+        }
+        
+        /* Hover Overlay */
+        .product-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover .product-hover {
+            opacity: 1;
+        }
+        
+        .quick-view-btn {
+            background: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            }
+            
+            .product-image {
+                height: 200px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="products-section">
+        <h2 class="section-title">Our Products</h2>
+        
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-badge">-30%</div>
+                <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Syltherine Chair" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Syltherine</h3>
+                    <p class="product-desc">Stylish cafe chair</p>
+                    <div class="product-pricing">
+                        <span class="current-price">Rp 2.500.000</span>
+                        <span class="original-price">Rp 3.500.000</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <div class="action-icons">
+                            <a href="#" title="Share"><i class="fas fa-share-alt"></i></a>
+                            <a href="#" title="Compare"><i class="fas fa-exchange-alt"></i></a>
+                            <a href="#" title="Like"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-hover">
+                    <button class="quick-view-btn">Quick View</button>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-badge">-50%</div>
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Lolito Sofa" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Lolito</h3>
+                    <p class="product-desc">Luxury big sofa</p>
+                    <div class="product-pricing">
+                        <span class="current-price">Rp 7.000.000</span>
+                        <span class="original-price">Rp 14.000.000</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <div class="action-icons">
+                            <a href="#" title="Share"><i class="fas fa-share-alt"></i></a>
+                            <a href="#" title="Compare"><i class="fas fa-exchange-alt"></i></a>
+                            <a href="#" title="Like"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-hover">
+                    <button class="quick-view-btn">Quick View</button>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Add remaining products following the same pattern -->
+            
+        </div>
+        
+        <div class="show-more">
+            <button class="show-more-btn">Show More</button>
+        </div>
+    </section>
+</body>
+</html>

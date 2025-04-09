@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Product Actions</title>
+    <style>
+        .product-container {
+            font-family: Arial, sans-serif;
+            width: 300px;
+            position: relative;
+            
+        }
+        
+        .add-to-cart {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 12px 0;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 15px;
+            
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            color: #666;
+            font-size: 14px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+           transform: translate(-50%,-50%); 
+           gap: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            flex-direction: column;
+            opacity: 0 ;
+            visibility: hidden;
+            transition: all .3s;
+
+           
+        }
+        
+        .action {
+            cursor: pointer;
+        }
+        
+        .action:hover {
+            color: #333;
+        }
+        .span{
+            background-color: rgba(240, 248, 255, 0.5);
+            text-align: center;
+            padding: 8px 0;
+        }
+        .product-container:hover .action-buttons {
+            opacity: 1;
+            visibility: visible;
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <img src="./bg-image (3).png" alt="">
+       
+
+        
+        <div class="action-buttons">
+           <div class="span">
+            <span class="action"></span><i class="fa-solid fa-share-nodes"></i>Share</span>
+            <span class="action">Compare </span>
+            <span class="action">Like</span>
+           </div>
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+    </div>
+    <div
+      class="billing-sections"
+      style="display: flex; align-items: center; gap: 10px"
+    >
+      <form style="flex: 1">
+        <h1>Billing</h1>
+    
+      </form>
+      <div style="flex: 1">
+        <h1>Payment</h1>
+      </div>
+    </div>
+</body>
+</html>

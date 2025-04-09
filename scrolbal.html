@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Carousel Section</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+        }
+        .carousel-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .carousel-text h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .carousel-text p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .carousel-text button {
+            background: #d49b38;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .carousel-text button:hover {
+            background: #b37c2c;
+        }
+        .carousel-images {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            white-space: nowrap;
+            width: 100%;
+            padding: 20px 0;
+            scroll-behavior: smooth;
+        }
+        .carousel-images img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            margin: 5px;
+            background: gray;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .active {
+            background: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="carousel-text">
+            <h2>50+ Beautiful rooms inspiration</h2>
+            <p>Our designer already made a lot of beautiful prototypes of rooms that inspire you.</p>
+            <button>Explore More</button>
+        </div>
+        <div class="carousel-images">
+            <img src="https://source.unsplash.com/400x300/?interior" alt="Room 1">
+            <img src="https://source.unsplash.com/400x300/?furniture" alt="Room 2">
+            <img src="https://source.unsplash.com/400x300/?livingroom" alt="Room 3">
+            <img src="https://source.unsplash.com/400x300/?bedroom" alt="Room 4">
+            <img src="./bg-image (3).png" alt="Room 5">
+        </div>
+        <div class="carousel-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</body>
+</html>

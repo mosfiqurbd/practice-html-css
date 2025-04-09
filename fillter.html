@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .filter-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+        background-color: #fdf5ef;
+        border-bottom: 1px solid #eee;
+        flex-wrap: wrap;
+      }
+      
+      .filter-left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      
+      .filter-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: none;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 5px 10px;
+      }
+      
+      .layout-toggle {
+        display: flex;
+        gap: 8px;
+      }
+      
+      .toggle-btn {
+        background: none;
+        border: 1px solid #ccc;
+        padding: 6px 8px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .toggle-btn.active {
+        background-color: #333;
+        border-color: #333;
+      }
+      
+      .toggle-btn img {
+        filter: brightness(0) invert(1);
+      }
+      
+      .results-text {
+        font-size: 14px;
+        color: #555;
+      }
+      
+      .filter-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      
+      .filter-right label {
+        font-size: 14px;
+        color: #333;
+      }
+      
+      .filter-right select {
+        padding: 4px 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+    </style>
+</head>
+<body>
+    <section class="filter-section">
+        <div class="filter-left">
+          <button class="filter-btn">
+            <img src="https://img.icons8.com/ios-filled/20/000000/filter.png" alt="Filter Icon">
+            <span>Filter</span>
+          </button>
+      
+          <div class="layout-toggle">
+            <button class="toggle-btn active">
+              <img src="https://img.icons8.com/ios-filled/20/000000/small-icons.png" alt="Grid Icon">
+            </button>
+            <button class="toggle-btn">
+              <img src="https://img.icons8.com/ios-filled/20/000000/list.png" alt="List Icon">
+            </button>
+          </div>
+      
+          <span class="results-text">Showing 1–16 of 32 results</span>
+        </div>
+      
+        <div class="filter-right">
+          <label for="show-select">Show</label>
+          <select id="show-select">
+            <option>16</option>
+            <option>32</option>
+          </select>
+      
+          <label for="sort-select">Short by</label>
+          <select id="sort-select">
+            <option>Default</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+          </select>
+        </div>
+      </section>
+      
+</body>
+</html>

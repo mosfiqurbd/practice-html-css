@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Menu</title>
+    <style>
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 2px;
+        }
+        ul li a{
+            display: inline-block;
+            width: 300px;
+            padding: 20px 0;
+            text-align: center;
+            text-decoration: none;
+            background-color: tomato;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: #fff;
+
+        }
+        ul li a:hover {
+            background-color: rgb(215, 90, 68);
+        }
+        ul li{
+            position: relative;
+        }
+        .submenu{
+            flex-direction: column;
+            display: none;
+        }
+        ul li:hover .submenu{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">About</a>
+        </li>
+        <li>
+            <a href="#">Services</a>
+            <ul class="submenu">
+                <li><a href="#">web Design</a></li>
+                <li><a href="#">Graphics Design</a></li>
+                <li><a href="#">Digital Marketing</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    
+<div class="flex-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</body>
+</html>

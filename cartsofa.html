@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asgaard Sofa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: #fff;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+      align-items: center;
+    }
+
+    .navbar a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .breadcrumb {
+      background: #f8f0e7;
+      padding: 20px 40px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    .breadcrumb span {
+      color: #000;
+      font-weight: bold;
+    }
+
+    .product-container {
+      display: flex;
+      padding: 40px;
+      gap: 40px;
+    }
+
+    .product-images {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .product-images img {
+      width: 100px;
+      cursor: pointer;
+      border: 1px solid #eee;
+    }
+
+    .main-image {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .product-details {
+      flex: 2;
+    }
+
+    .product-details h1 {
+      font-size: 32px;
+      margin: 0;
+    }
+
+    .price {
+      font-size: 24px;
+      color: #999;
+      margin: 10px 0;
+    }
+
+    .stars {
+      color: #f5c518;
+      font-size: 18px;
+    }
+
+    .description {
+      margin: 20px 0;
+      color: #555;
+    }
+
+    .size-options, .color-options {
+      margin-bottom: 20px;
+    }
+
+    .size-options button, .color-options button {
+      margin-right: 10px;
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    .color-options button {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+    }
+
+    .add-cart {
+      padding: 15px 25px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+
+    .compare-btn {
+      padding: 15px 25px;
+      border: 1px solid #000;
+      background: none;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo"><strong>Furniro</strong></div>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <div class="breadcrumb">
+    Home > Shop > <span>Asgaard sofa</span>
+  </div>
+
+  <div class="product-container">
+    <div class="product-images">
+      <img src="image.png" alt="Thumb 1" />
+      <img src="image.png" alt="Thumb 2" />
+      <img src="image.png" alt="Thumb 3" />
+    </div>
+
+    <div class="product-details">
+      <h1>Asgaard sofa</h1>
+      <div class="price">Rs. 250,000.00</div>
+      <div class="stars">★★★★☆ 5 Customer Review</div>
+      <p class="description">
+        Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact,
+        stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs
+        for a sound.
+      </p>
+
+      <div class="size-options">
+        <strong>Size:</strong><br>
+        <button>L</button>
+        <button>XL</button>
+        <button>XS</button>
+      </div>
+
+      <div class="color-options">
+        <strong>Color:</strong><br>
+        <button style="background: purple;"></button>
+        <button style="background: gold;"></button>
+        <button style="background: black;"></button>
+      </div>
+
+      <button class="add-cart">Add To Cart</button>
+      <button class="compare-btn">+ Compare</button>
+    </div>
+  </div>
+
+</body>
+</html>

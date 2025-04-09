@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+  display: flex;
+  flex-direction: row; /* Main axis is horizontal */
+  justify-content: space-between; /* Aligns items along the main axis */
+  align-items: center; /* Aligns items along the cross axis */
+  height: 200px;
+  border: 2px solid black;
+}
+
+.item {
+  width: 50px;
+  height: 50px;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  flex-direction: column; /* Main axis is now vertical */
+  justify-content: space-between; /* Aligns items vertically */
+  align-items: center;
+  .multi-bg {
+  width: 400px;
+  height: 300px;
+  border: 2px solid black;
+
+  /* Multiple background images */
+  background-image: url('image1.png'), url('image2.png');
+
+  /* Positioning for each image */
+  background-position: top left, bottom right;
+
+  /* Sizing for each image */
+  background-size: 50% auto, 100px 100px;
+
+  /* Repeat behavior for each image */
+  background-repeat: no-repeat, no-repeat;
+} /* Aligns items horizontally */
+}
+.multi-bg {
+  width: 400px;
+  height: 300px;
+  border: 2px solid black;
+
+  background: 
+    url('image1.png') top left / 50% auto no-repeat,
+    url('image2.png') bottom right / 100px 100px no-repeat;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+      <div class="multi-bg"></div>
+</body>
+</html>

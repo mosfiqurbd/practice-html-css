@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Hero Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            height: 100vh;
+            background: #f5f5f5;
+            padding: 20px;
+           
+        }
+        .hero-content {
+            max-width: 600px;
+            background: #f9e5c2;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: static;
+                transform: none;
+                width: 100%;
+                margin-top: 20px;
+        }
+        .hero-content h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .hero-content p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background: #7a5c3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #5a412b;
+        }
+        .cart {
+            background: #f9e5c2;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .hero-content {
+                width: 90%;
+            }
+            .cart {
+                position: static;
+                transform: none;
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover Our New Collection</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <button class="btn">Buy Now</button>
+        </div>
+        <!-- <div class="cart">Cart Content</div> -->
+    </section>
+</body>
+</html>
